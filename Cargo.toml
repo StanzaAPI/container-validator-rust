@@ -1,0 +1,18 @@
+[package]
+name = "stanzaapi-container-validator"
+version = "1.0.0"
+edition = "2021"
+authors = ["Stanza"]
+description = "Official high-speed Rust client for ISO 6346 Container & Chassis Check-Digit Validator"
+license = "MIT"
+readme = "README.md"
+homepage = "https://stanzaapi.com/tools/container-validator"
+repository = "https://github.com/stanzaapi/container-validator-rust"
+keywords = ["iso-6346","shipping","check-digit","intermodal","logistics"]
+categories = ["web-programming::http-client", "development-tools::ffi"]
+
+[dependencies]
+reqwest = { version = "0.12", default-features = false, features = ["json", "rustls-tls"] }
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+tokio = { version = "1.0", features = ["macros", "rt-multi-thread"], optional = true }
